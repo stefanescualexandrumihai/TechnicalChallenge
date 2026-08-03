@@ -1,0 +1,27 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: tc-app
+  namespace: tc-app
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: ./
+      sourceRef:
+        kind: GitRepository
+        name: source-tc-app
+        namespace: flux-system
+      reconcileStrategy: Revision
+      interval: 1m
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+      strategy: rollback
+  driftDetection:
+    mode: enabled
+  values: {}
