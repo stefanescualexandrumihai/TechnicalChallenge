@@ -1,0 +1,16 @@
+# flux create source git source-tc-app \
+# --url https://github.com/stefanescualexandrumihai/TechnicalChallenge-App \
+# --interval 1m \
+# --branch main 
+# --export
+# flux get sources git
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: source-tc-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/stefanescualexandrumihai/TechnicalChallenge-App.git

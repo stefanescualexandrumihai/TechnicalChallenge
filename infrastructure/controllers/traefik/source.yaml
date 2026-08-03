@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: source-tc-traefik
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    tag: ${TRAEFIK_VERSION:=v1.0.0}
+  url: https://github.com/stefanescualexandrumihai/TechnicalChallenge-Traefik

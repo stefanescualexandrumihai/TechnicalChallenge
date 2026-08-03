@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: traefik
+spec:
+  values:
+    traefik:
+      log:
+        level: WARN
+      deployment:
+        replicas: 3
+      podDisruptionBudget:
+        enabled: true
+        minAvailable: 2
+      resources:
+        requests:
+          cpu: 200m
+          memory: 128Mi
+        limits:
+          cpu: "1"
+          memory: 512Mi

@@ -43,4 +43,4 @@ spec:
     kind: GitRepository
     url: "https://github.com/stefanescualexandrumihai/TechnicalChallenge.git"
     ref: "refs/heads/main"
-    path: "clusters/technicalchallenge"
+    path: "clusters/tc-dev-euc1"
