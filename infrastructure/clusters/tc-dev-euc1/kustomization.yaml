@@ -6,3 +6,4 @@ resources:
 
 patches:
   - path: traefik.yaml
+  - path: metrics-server.yaml
