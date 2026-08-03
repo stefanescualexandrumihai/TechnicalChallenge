@@ -1,9 +1,0 @@
-apiVersion: v2
-name: tc-traefik
-description: Traefik umbrella chart for Kubernetes
-type: application
-version: 1.0.0
-dependencies:
-  - name: traefik
-    version: 41.1.0
-    repository: "https://traefik.github.io/charts"
