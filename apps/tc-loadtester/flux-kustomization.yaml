@@ -1,0 +1,15 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tc-loadtester-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./overlays/${ENV}
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: source-tc-loadtester
+  dependsOn:
+    - name: tc-loadtester
