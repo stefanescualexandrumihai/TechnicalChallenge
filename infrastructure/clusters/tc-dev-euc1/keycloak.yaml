@@ -19,7 +19,7 @@ spec:
       - start-dev
     extraEnv: |
       - name: KC_HOSTNAME
-        value: http://keycloak.localhost:8080
+        value: keycloak.localhost
       - name: KC_LOG_LEVEL
         value: INFO
     http:
