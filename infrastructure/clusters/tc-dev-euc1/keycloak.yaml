@@ -19,7 +19,7 @@ spec:
       - start-dev
     extraEnv: |
       - name: KC_HOSTNAME
-        value: keycloak.localhost
+        value: http://keycloak.localhost:8080
       - name: KC_LOG_LEVEL
         value: INFO
     http:
@@ -35,5 +35,5 @@ spec:
       rules:
         - host: keycloak.localhost
           paths:
-            - path: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}/'
+            - path: '{{ tpl .Values.http.relativePath $ | trimSuffix "/" }}'
               pathType: Prefix
