@@ -11,8 +11,8 @@ spec:
         cpu: 100m
         memory: 256Mi
       limits:
-        cpu: 500m
-        memory: 512Mi
+        cpu: 1500m
+        memory: 1024Mi
     database:
       vendor: dev-file
     args:
@@ -21,7 +21,7 @@ spec:
       - name: KC_HOSTNAME
         value: keycloak.localhost
       - name: KC_LOG_LEVEL
-        value: DEBUG
+        value: INFO
     http:
       relativePath: "/auth"  
     extraEnvFrom: |
