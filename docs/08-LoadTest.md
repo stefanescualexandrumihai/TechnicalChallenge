@@ -83,5 +83,5 @@ loadtest stopped — 300s for scale-down (window 300s)
 15:15:33  pods=10  cpu=1m  mem=39Mi
 15:15:48  pods=10  cpu=1m  mem=39Mi
 
-poduri 1 → 10   CPU avg 254m/pod (target HPA 50m)
+pods 1 → 10   CPU avg 254m/pod (target HPA 50m)
 ```
