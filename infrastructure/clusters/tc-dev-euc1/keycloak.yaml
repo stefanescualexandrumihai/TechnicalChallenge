@@ -23,7 +23,7 @@ spec:
       - name: KC_LOG_LEVEL
         value: INFO
     http:
-      relativePath: "/"  
+      relativePath: "/"
     extraEnvFrom: |
       - secretRef:
           name: keycloak-secrets
