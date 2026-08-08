@@ -1,7 +1,7 @@
 # flux create source git source-tc-app \
 # --url https://github.com/stefanescualexandrumihai/TechnicalChallenge-App \
 # --interval 1m \
-# --branch main 
+# --branch main
 # --export
 # flux get sources git
 apiVersion: source.toolkit.fluxcd.io/v1
